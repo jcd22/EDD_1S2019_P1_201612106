@@ -16,8 +16,9 @@ class ListaDoble():
 	    return self.size == 0	
 
     def insertar_final(self, valor):
-    	if self.estaVacia():
-    		self.primer = nevo
+
+        if self.estaVacia():
+            self.primer = nevo
     	else:	
             temporal = self.primer #apnta al primero de la lista
             while (temporal.siguiente!=None)

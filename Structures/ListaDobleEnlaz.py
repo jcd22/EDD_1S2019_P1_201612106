@@ -30,3 +30,23 @@ class DobleEnlazada():
            self.ultimo.siguiente = self.primero
            self.primero.anterior = self.ultimo    
            self.size = self.size + 1
+    
+  def BulkLoad(self):
+
+    todo=""
+    x = []
+    e=0
+    with open('usuarios.csv') as csvfile:
+      data = csv.reader(csvfile,delimiter='\n')
+      for i in data:
+        x.append(i[0])
+      while e < len(x):
+        if e>0:
+          self.Insert(NodeUsers(x[e]))
+          todo+=x[e]+"\n"
+        e+=1
+      archivo = open('usuarios.txt','w')
+      archivo.write(todo)
+      archivo.seek(0)
+
+
