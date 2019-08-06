@@ -1,3 +1,7 @@
+import csv
+import os, sys
+import subprocess
+
 class NodeDoble():
 
 	def __init__(self, cont):
@@ -53,24 +57,23 @@ class DobleList():
 			i += 1
 
 	def BulkLoad(self):
-    todo=""
-    x = []
-    e=0
-    with open('usuarios.csv') as csvfile:
-      data = csv.reader(csvfile,delimiter='\n')
-      for i in data:
-        x.append(i[0])
-      while e < len(x):
-        if e>0:
-          self.insert_End(x[e])
-          todo+=x[e]+"\n"
-        e+=1
-      archivo = open('usuarios.txt','w')
-      archivo.write(todo)
-      archivo.seek(0)
 		
-
-
+		todo=""
+		x = []
+		e = 0
+		with open('usuarios.csv') as csvfile:
+			data = csv.reader(csvfile,delimiter='\n')
+			for i in data:
+				x.append(i[0])
+			while e < len(x):
+				if e>0:
+					self.insert_End(x[e])
+					todo += x[e] + "\n"
+				e += 1
+			archivo = open('usuarios.txt','w')
+			archivo.write(todo)
+			archivo.seek(0)
+			return x					
 
 #prueba
 ls = DobleList()
@@ -78,4 +81,6 @@ ls.insert_End("1")
 ls.insert_End("2")
 ls.insert_End("3")
 
-ls.PrintC()
+
+
+
