@@ -42,6 +42,10 @@ class DobleList():
 			self.size += 1
 
 
+	def getSize(self):
+		return self.size
+
+
 
 	def PrintC(self):
 	
@@ -73,14 +77,38 @@ class DobleList():
 			archivo = open('usuarios.txt','w')
 			archivo.write(todo)
 			archivo.seek(0)
-			return x					
+			return x	
+
+	def UsersReport(self):
+		
+		ContGraf = "digraph G {"+"\n"
+		if self.Empty():
+
+			print("Is Empty")
+
+		else:
+
+			temp = self.first
+			temp2 = self.last
+
+			while True:
+				ContGraf = ContGraf + temp.cont + "->"+ temp.next.cont + "; \n"
+				ContGraf = ContGraf + temp2.cont + "->" + temp2.prev.cont + "; \n"
+				temp = temp.next
+				temp2 = temp2.prev
+				if temp.next == self.first:
+					break
+
+			ContGraf = ContGraf + "\n "+"}"
+			print(ContGraf)
+			new_file = open('DobleList.dot','w')
+			new_file.write(ContGraf)
+			new_file.seek(0)
+			comando = " dot -Tpng  DobleList.dot -o DobleList.png"
+			os.system(comando)
+			os.system("DobleList.png")
 
 #prueba
-ls = DobleList()
-ls.insert_End("1")
-ls.insert_End("2")
-ls.insert_End("3")
-
 
 
 

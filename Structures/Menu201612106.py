@@ -4,16 +4,22 @@ import ListaDobleEnlaz1
 
 menu = ['Play', 'Scoreboard', 'User Selection', 'Reports', 'Bulk Loading','Exit']
 Users = ['Juan', 'Pedro', 'Carlos', 'Fran', 'Walter','Tono']
-
-
-def BulkLoading(stdscr):
+cir2 = ListaDobleEnlaz1.DobleList()
+temp = ListaDobleEnlaz1.NodeDoble("")
+size1 = None
+bulke = None
+"""def BulkLoading(stdscr):
 
 	cir = ListaDobleEnlaz1.DobleList()
 	bulk = cir.BulkLoad()
 	return bulk
+#otra instancia"""
 
+	
+	
 
-def print_menu(stdscr, selected_row_idx,idMenu):
+def print_menu(stdscr, selected_row_idx,idMenu,tempo):
+
 	stdscr.clear()
 	h, w = stdscr.getmaxyx()
 
@@ -36,21 +42,28 @@ def print_menu(stdscr, selected_row_idx,idMenu):
 		stdscr.refresh()
 
 	elif idMenu == 2:
-		bulk = BulkLoading(stdscr)
 
-		for idx, row in enumerate(bulk):
+		#bulk = BulkLoading(stdscr)#
+		size1 = cir2.getSize()
+		bulke = list(range(size1))
+
+
+		for idx, row in enumerate(bulke):
 			
-			x = w//2 - len(row)//2
-			y = h//2 - len(bulk)//2 + idx
+			x = w//2 - row//2
+			y = h//2 - len(bulke)//2 + idx
 			#stdscr.addstr(y, x, row)
 			if idx == selected_row_idx:
 				stdscr.attron(curses.color_pair(1))
-				stdscr.addstr(y, x, row)
+				stdscr.addstr(y, x, tempo.cont)
+				#stdscr.addstr(y, x, row)
 				stdscr.attroff(curses.color_pair(1))
 			else:
 				stdscr.attron(curses.color_pair(2))
-				stdscr.addstr(y, x, row)
-				stdscr.attroff(curses.color_pair(2))	
+				stdscr.addstr(y, x, tempo.cont)
+				#stdscr.addstr(y, x, row)
+				stdscr.attroff(curses.color_pair(2))
+			#tempo = temp.next		
 	#time.sleep(10)
 
 def movement_menu(stdscr):
@@ -62,8 +75,9 @@ def movement_menu(stdscr):
 	SelectedMenu = None
 	idMenu  = 1
 	new_bulk = None
+	new_tempo = None
 	print("adentro")
-	print_menu(stdscr,current_row_idx,idMenu)
+	print_menu(stdscr,current_row_idx,idMenu,new_tempo)
 
 	while 1:
 		key = stdscr.getch()
@@ -72,35 +86,44 @@ def movement_menu(stdscr):
 
 		if idMenu == 1:
 			SelectedMenu = menu
-		elif idMenu == 2:
-			bulk = BulkLoading(stdscr)
-			SelectedMenu = bulk	
+
 
 		if key == curses.KEY_UP and current_row_idx > 0:
 			current_row_idx -= 1
 		elif key == curses.KEY_DOWN and current_row_idx < len(SelectedMenu)-1:
 			current_row_idx += 1
-		elif key == curses.KEY_ENTER or key in [10, 13]:
+		elif key == curses.KEY_ENTER or key in [10, 13]:#AL PRECIONAR ENTER
 
 			if current_row_idx == len(SelectedMenu)-1 and idMenu == 1: #exit
 				break
 
 			elif current_row_idx == len(SelectedMenu)-2 and idMenu == 1: #BulkLoad
-				new_bulk = BulkLoading(stdscr)
+				#new_bulk = BulkLoading(stdscr)
+				new_bulk = 1
+				cir2.BulkLoad()
 				stdscr.erase()
 				stdscr.addstr(0,0, "The BulkLoad has been completed")
 				stdscr.getch()
 
+			elif current_row_idx == len(SelectedMenu)-3 and idMenu == 1: #Reports
+				cir2.UsersReport()
+				
+
 			elif current_row_idx == len(SelectedMenu)-4 and idMenu == 1:#player select
 				stdscr.erase()
-				bulk = BulkLoading(stdscr)
+				#sbulk = BulkLoading(stdscr)#
 				if new_bulk != None:
 					idMenu = 2
+					temp = cir2.last
+					new_tempo = temp
+					size1 = cir2.getSize()
+					bulke = list(range(size1))
+					SelectedMenu = bulke
 				else :
 					stdscr.addstr(0,0,"Players have not been load")
 					stdscr.getch()
 				
-		print_menu(stdscr,current_row_idx,idMenu)	
+		print_menu(stdscr,current_row_idx,idMenu,new_tempo)
 		stdscr.refresh()
 	#time.sleep(3)
 
