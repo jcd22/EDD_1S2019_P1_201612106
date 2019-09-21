@@ -1,0 +1,134 @@
+body {
+    background: #FFF;
+    margin: 0;
+    padding: 0;
+}
+
+#bodyart{
+  margin:0;
+  padding: 0;
+  background: #666;
+  width: 480px;
+  height: 480px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+
+#bodyart div {
+  margin: 0;
+  padding: 0;
+  background: #FFF;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #666;
+  display: block;
+  float: left;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 25px;
+  font-size: 12px;
+}
+
+#bodyart div:nth-child(83), #bodyart div:nth-child(82), 
+#bodyart div:nth-child(86), #bodyart div:nth-child(87)
+, #bodyart div:nth-child(88), #bodyart div:nth-child(89)
+, #bodyart div:nth-child(90), #bodyart div:nth-child(91)
+, #bodyart div:nth-child(95), #bodyart div:nth-child(67)
+, #bodyart div:nth-child(70), #bodyart div:nth-child(71)
+, #bodyart div:nth-child(72), #bodyart div:nth-child(73)
+, #bodyart div:nth-child(74), #bodyart div:nth-child(75)
+, #bodyart div:nth-child(51), #bodyart div:nth-child(52)
+, #bodyart div:nth-child(53), #bodyart div:nth-child(54)
+, #bodyart div:nth-child(55), #bodyart div:nth-child(56)
+, #bodyart div:nth-child(57), #bodyart div:nth-child(58)
+, #bodyart div:nth-child(59), #bodyart div:nth-child(60)
+, #bodyart div:nth-child(62), #bodyart div:nth-child(36)
+, #bodyart div:nth-child(37), #bodyart div:nth-child(38)
+, #bodyart div:nth-child(39), #bodyart div:nth-child(40)
+, #bodyart div:nth-child(41), #bodyart div:nth-child(42)
+, #bodyart div:nth-child(43), #bodyart div:nth-child(44)
+, #bodyart div:nth-child(45), #bodyart div:nth-child(98)
+, #bodyart div:nth-child(99), #bodyart div:nth-child(100)
+, #bodyart div:nth-child(101), #bodyart div:nth-child(102)
+, #bodyart div:nth-child(103), #bodyart div:nth-child(104)
+, #bodyart div:nth-child(105), #bodyart div:nth-child(106)
+, #bodyart div:nth-child(107), #bodyart div:nth-child(111)
+, #bodyart div:nth-child(129), #bodyart div:nth-child(130)
+, #bodyart div:nth-child(131), #bodyart div:nth-child(132)
+, #bodyart div:nth-child(133), #bodyart div:nth-child(134)
+, #bodyart div:nth-child(135), #bodyart div:nth-child(136)
+, #bodyart div:nth-child(137), #bodyart div:nth-child(138)
+, #bodyart div:nth-child(139), #bodyart div:nth-child(140)
+, #bodyart div:nth-child(141), #bodyart div:nth-child(142)
+, #bodyart div:nth-child(143), #bodyart div:nth-child(114),
+  #bodyart div:nth-child(115), #bodyart div:nth-child(116),
+  #bodyart div:nth-child(117), #bodyart div:nth-child(118),
+  #bodyart div:nth-child(119), #bodyart div:nth-child(120), 
+  #bodyart div:nth-child(121), #bodyart div:nth-child(122),
+  #bodyart div:nth-child(123), #bodyart div:nth-child(124),
+  #bodyart div:nth-child(125), #bodyart div:nth-child(126),
+  #bodyart div:nth-child(127), #bodyart div:nth-child(146)
+, #bodyart div:nth-child(147), #bodyart div:nth-child(148)
+, #bodyart div:nth-child(149), #bodyart div:nth-child(150)
+, #bodyart div:nth-child(151), #bodyart div:nth-child(152)
+, #bodyart div:nth-child(153), #bodyart div:nth-child(154)
+, #bodyart div:nth-child(155), #bodyart div:nth-child(156)
+, #bodyart div:nth-child(157), #bodyart div:nth-child(158)
+, #bodyart div:nth-child(159), #bodyart div:nth-child(162)
+, #bodyart div:nth-child(163), #bodyart div:nth-child(172)
+, #bodyart div:nth-child(173), #bodyart div:nth-child(174)
+, #bodyart div:nth-child(175),#bodyart div:nth-child(1)
+
+{
+background: yellow;
+}
+
+#bodyart div:nth-child(97), #bodyart div:nth-child(113), #bodyart div:nth-child(129)
+, #bodyart div:nth-child(145), #bodyart div:nth-child(161), #bodyart div:nth-child(81)
+, #bodyart div:nth-child(50), #bodyart div:nth-child(66), #bodyart div:nth-child(145)
+, #bodyart div:nth-child(35), #bodyart div:nth-child(20), #bodyart div:nth-child(21)
+, #bodyart div:nth-child(6), #bodyart div:nth-child(7), #bodyart div:nth-child(8)
+, #bodyart div:nth-child(9), #bodyart div:nth-child(10), #bodyart div:nth-child(11)
+, #bodyart div:nth-child(28), #bodyart div:nth-child(29), #bodyart div:nth-child(46)
+, #bodyart div:nth-child(63), #bodyart div:nth-child(79), #bodyart div:nth-child(96)
+, #bodyart div:nth-child(112), #bodyart div:nth-child(128), #bodyart div:nth-child(144)
+, #bodyart div:nth-child(160), #bodyart div:nth-child(176), #bodyart div:nth-child(164)
+, #bodyart div:nth-child(165), #bodyart div:nth-child(166), #bodyart div:nth-child(167)
+, #bodyart div:nth-child(168), #bodyart div:nth-child(169), #bodyart div:nth-child(170)
+, #bodyart div:nth-child(171), #bodyart div:nth-child(178), #bodyart div:nth-child(179)
+, #bodyart div:nth-child(180), #bodyart div:nth-child(182), #bodyart div:nth-child(185)
+, #bodyart div:nth-child(188), #bodyart div:nth-child(189), #bodyart div:nth-child(190)
+, #bodyart div:nth-child(195), #bodyart div:nth-child(198), #bodyart div:nth-child(201)
+, #bodyart div:nth-child(205), #bodyart div:nth-child(211), #bodyart div:nth-child(221)
+, #bodyart div:nth-child(228), #bodyart div:nth-child(236), #bodyart div:nth-child(245)
+, #bodyart div:nth-child(246), #bodyart div:nth-child(247), #bodyart div:nth-child(248)
+, #bodyart div:nth-child(249), #bodyart div:nth-child(250), #bodyart div:nth-child(251)
+, #bodyart div:nth-child(191) 
+{
+  background: green;
+
+}
+
+#bodyart #a1-1{
+	background-color:  white;
+}
+
+
+#bodyart #a16-1{
+  background-color:  green;
+}
+
+
+#bodyart #a16-16{
+  background-color:  green;
+}
+
+
+#bodyart div{ /*todos los espacios en blanco los rellena*/
+  background-color: black;
+}
+
+

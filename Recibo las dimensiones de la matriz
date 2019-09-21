@@ -1,0 +1,12 @@
+Recibo las dimensiones de la matriz 
+x = 16 
+y =16
+
+cre con el js la matriz 
+posicion = posicion matriz;
+color = contenido;
+
+
+creo mi archivo css;
+agrego el color 1 por uno a la matriz
+while que recorra cada uno de los colores y su posicion y los vaya pindando con el id y el color que piden;
