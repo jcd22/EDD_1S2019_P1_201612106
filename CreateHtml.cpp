@@ -7,7 +7,7 @@
 #include <sstream>
 #include <cstdlib>
 #include <vector>
-
+//nueva linea
 
 using namespace std;
 
@@ -33,7 +33,7 @@ public:
 			// Obtener Nombre De Archivo Inicial
 			cout << "\nEnter Initial File Name -> ";
 			cin >> ruta; // Ingresar Nombre De Archivo
-			ruta =  ruta + ".js"; // Agregar Extensión
+			ruta =  ruta + ".js"; // Agregar ExtensiÃ³n
 			ofstream fs("HtmlMatrix.html");
 			 // ofstream file;
               //file.open("C:/ruta/archivos/archivo.txt");
@@ -103,7 +103,7 @@ cout<<pablo[0]<<"\n"<<pablo[1]<<"\n"<<pablo[2]<<endl;
 			// Obtener Nombre De Archivo Inicial
 			cout << "\nEnter Initial File Name -> ";
 			cin >> ruta; // Ingresar Nombre De Archivo
-			ruta =  ruta + ".css"; // Agregar Extensión
+			ruta =  ruta + ".css"; // Agregar ExtensiÃ³n
 			ofstream fs("HtmlMatrix.css");
 			 // ofstream file;
               //file.open("C:/ruta/archivos/archivo.txt");
